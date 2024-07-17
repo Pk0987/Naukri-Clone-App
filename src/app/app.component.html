@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mx-0">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse mx-4" id="navbarTogglerDemo01">
+       <img class="d-inline-block align-text-top mx-5" routerLink="/home" src="../assets/Naukri logo.png" style="width: 130px; " alt="">
+      <ul class="navbar-nav me-auto mx-5 mb-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/jobs" aria-current="page">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Companies</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/new-job" >Create new Job</a>
+        </li>
+      </ul>
+      <form class="form-inline mx-2 mx-lg-0">
+        <button *ngIf="!isLoggedIn" class="btn btn-outline-primary mx-2" type="button" routerLink="/login">Login</button>
+        <button *ngIf="!isLoggedIn" class="btn btn-outline-success mx-2" type="button" routerLink="/register">Register</button>
+        <button *ngIf="isLoggedIn" class="btn btn-link mx-2" type="button"> {{userInfo.userName}} </button>
+        <button *ngIf="isLoggedIn" (click)="logOff()" class="btn btn-info mx-2" type="button" >Log off</button>
+
+      </form>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <router-outlet></router-outlet>
+  </div>

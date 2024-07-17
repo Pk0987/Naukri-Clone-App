@@ -1,0 +1,15 @@
+<div class="form-structor">
+	<div class="signup">
+		<h2 class="form-title" id="signup">Login</h2>
+		<div class="form-holder p-3">
+			<!-- <input type="text" class="input"  placeholder="Name" /> -->
+			<input type="email" class="input" [(ngModel)]="loginObj.UserName" name="UserName" placeholder="Email" />
+			<input type="password" class="input" [(ngModel)]="loginObj.Password" name="Password" placeholder="Password" />
+		</div>
+	</div>
+	<div class="login slide-up">
+		<div class="center">
+			<h2 class="form-title" (click)="onLogin()" id="login">Log in</h2>
+		</div>
+	</div>
+</div>

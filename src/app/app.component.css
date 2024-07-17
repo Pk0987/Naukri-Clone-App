@@ -1,0 +1,6 @@
+.navbar{
+    --bs-navbar-padding-y: 0rem;
+}
+.nav-item{
+    padding: 0px 10px;
+}
